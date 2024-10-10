@@ -1,7 +1,11 @@
 /* Example#1 */
 let strExample1 = '';
-for (let i = 10; i <= 20; i += 1) {
-  strExample1 += `${i}, `;
+for (i = 10; i <= 20; i++) {
+  if (i === 20) {
+    strExample1 += i;
+  } else {
+    strExample1 += `${i}, `;
+  }
 }
 console.log(strExample1);
 
@@ -27,9 +31,9 @@ for (let i = 1; i <= 15; i += 1) {
 console.log(sumExample4);
 
 /* Example#5 */
-let multExample5 = 1;
+let multExample5 = 1n;
 for (let i = 15; i <= 35; i += 1) {
-  multExample5 *= i;
+  multExample5 *= BigInt(i);
 }
 console.log(BigInt(multExample5));
 
@@ -45,7 +49,8 @@ console.log(avg);
 
 /* Example#7 */
 let sumExample7 = 0;
-for (let i = 30; i <= 80; i += 2) {
+for (let i = 30; i <= 80; i += 1) {
+  if (i % 2 !== 0) continue;
   sumExample7 += i;
 }
 console.log(sumExample7);
