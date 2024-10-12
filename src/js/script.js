@@ -1,14 +1,21 @@
 'use strict';
-const userNumber = Number(prompt('Введіть число: '));
-const userDegree = Number(prompt('Введіть ступінь числа: '));
 
-function calculation(number, degree = 1) {
-    if (Number.isNaN(number) || Number.isNaN(degree)) return alert("Помилка");
-    return Math.pow(number, degree);
+const userNumber = +prompt('Введіть число:');
+const userDegree = +prompt('Введіть ступінь:');
+
+function calculateExponent (num, degree = 1) {
+    return Number.isNaN(num) || Number.isNaN(degree)? 'Помилка' : Math.pow(num, degree);
 }
 
-const result = calculation (userNumber, userDegree);
-alert("Ось ваше число: " + result);
+function calculateExponent2 (num, degree = 1) {
+    return Number.isNaN(num) || Number.isNaN(degree)? 'Помилка' : Math.pow(num, degree);
+    if (Number.isNaN(num) || Number.isNaN(degree)) return 'Помилка';
+    return Math.pow(num, degree);
+}
+
+const result = calculateExponent(userNumber, userDegree);
+
+alert(result);
 
 
 
