@@ -8,7 +8,6 @@ function calculateExponent (num, degree = 1) {
 }
 
 function calculateExponent2 (num, degree = 1) {
-    return Number.isNaN(num) || Number.isNaN(degree)? 'Помилка' : Math.pow(num, degree);
     if (Number.isNaN(num) || Number.isNaN(degree)) return 'Помилка';
     return Math.pow(num, degree);
 }
